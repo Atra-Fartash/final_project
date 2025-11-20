@@ -45,13 +45,13 @@ class Discount(models.Model):
         if not self.is_active:
             return False, 'This code is not active'
         
-        if self.start_date > now or self.start_date < now:
+        if self.start_date > now or self.end_date < now:
             return False, 'This code is not active'
         
         if self.user and self.user!=user:
             return False, 'This code is not active'
         
-        if self.is_single_use and self.usage_count >= 1:
+        if self.is_single_use and self.usage_count > 1:
             return False, 'This code has already been used'
         
         if not self.is_single_use and self.usage_count >= self.max_usage:
