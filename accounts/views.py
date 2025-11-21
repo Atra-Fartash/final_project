@@ -8,6 +8,7 @@ from django.core.cache import cache
 from rest_framework.response import Response
 from datetime import timedelta
 from django.utils.timezone import now
+from Final_Project.settings import otp_lifetime
 
 
 
@@ -35,13 +36,13 @@ class GetOTP(APIView):
     def post(self, request):
         genrated_otp = random.randint(1000, 9999)
         phone_number = request.data.get("phone_number")
-        cache.set(phone_number, genrated_otp, timeout=180)
+        cache.set(phone_number, genrated_otp, timeout=otp_lifetime)
         otp_object = OTP.objects.create(
             otp = genrated_otp,
             phone_number = request.data.get('phone_number'),
         )
         # SEND OTP TO USER BY SMS
-        otp_object.expire_date = now() + timedelta(seconds=180)
+        otp_object.expire_date = now() + timedelta(seconds=otp_lifetime)
         otp_object.save()
         return Response("OTP sent!")
 
