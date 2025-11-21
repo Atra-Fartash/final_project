@@ -107,9 +107,9 @@ class Ticket(models.Model):
     ]
 
     SECTION_CHOICES=[
-        ('1', 'مالی'),
-        ('2', 'پشتیبانی'),
-        ('3', 'آموزشی')
+        ('1', 'financial'),
+        ('2', 'support'),
+        ('3', 'educational')
     ]
 
     user = models.ForeignKey(to=User, on_delete=models.CASCADE)
