@@ -6,6 +6,8 @@ from rest_framework import permissions
 import random
 from django.core.cache import cache
 from rest_framework.response import Response
+from datetime import timedelta
+from django.utils.timezone import now
 
 
 
@@ -33,16 +35,14 @@ class GetOTP(APIView):
     def post(self, request):
         genrated_otp = random.randint(1000, 9999)
         phone_number = request.data.get("phone_number")
-        # SEND OTP TO USER BY SMS
         cache.set(phone_number, genrated_otp, timeout=180)
-
-        # otp_object = OTP.objects.create(
-        #     otp = genrated_otp,
-        #     phone_number = request.data.get('phone_number'),
-        # )
+        otp_object = OTP.objects.create(
+            otp = genrated_otp,
+            phone_number = request.data.get('phone_number'),
+        )
         # SEND OTP TO USER BY SMS
-        # otp_object.expire_date = now() + timedelta(seconds=180)
-        # otp_object.save()
+        otp_object.expire_date = now() + timedelta(seconds=180)
+        otp_object.save()
         return Response("OTP sent!")
 
 
@@ -52,12 +52,12 @@ class CheckOTP(APIView):
         input_otp = request.data.get("otp")
         input_phone_number = request.data.get("phone_number")
         saved_otp = cache.get(input_phone_number)
-        # saved_otp = OTP.objects.get(phone_number=input_phone_number)
-        # if saved_otp.otp == input_otp and saved_otp.expire_date >= now():
-        #     saved_otp.delete()
-        #     return Response('OK')
-        # else:
-        #     return Response('Something is wrong!')
+        saved_otp = OTP.objects.get(phone_number=input_phone_number)
+        if saved_otp.otp == input_otp and saved_otp.expire_date >= now():
+            saved_otp.delete()
+            return Response('OK')
+        else:
+            return Response('Something is wrong!')
     
 
 class TransactionView(CreateAPIView):
