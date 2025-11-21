@@ -68,7 +68,6 @@ class CoursTierPrice(models.Model):
 
 
 class GroupMembers(models.Model):
-    course = models.ForeignKey(to=Course, on_delete=models.CASCADE)
     buyer = models.ForeignKey(to=User, on_delete=models.CASCADE)
     name = models.CharField(max_length=100)
     email = models.EmailField(null=True, blank=True)
