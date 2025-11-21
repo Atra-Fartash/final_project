@@ -31,17 +31,17 @@ class AddBasketItem(CreateAPIView):
         if Enrollment.objects.filter(user=user, course=course).exists():
             raise serializers.ValidationError('You have already bought this course.')
         
-        basket = Basket.objects.filter(owner=user, is_paid=False)
-        if not basket.exists():
-            basket = Basket.objects.create(
-                owner=self.request.user,
-                total_price=0,
-                final_price=0,
-            )
-        else:
-            basket = basket.get()
-            if basket.items.filter(course=course):
-                raise serializers.ValidationError('This course is already in your basket.')
+        basket, create = Basket.objects.get_or_create(
+            owner = user,
+            is_paid = False,
+            defaults={
+                'total_price' : 0,
+                'final_prrice' : 0,
+            }
+        )
+        
+        if basket.items.filter(course=course):
+            raise serializers.ValidationError('This course is already in your basket.')
         
         serializer.save(owner=self.request.user, basket=basket)
         _update_basket_price(basket)
