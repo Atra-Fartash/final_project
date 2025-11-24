@@ -152,4 +152,4 @@ SIMPLE_JWT = {
     "REFRESH_TOKEN_LIFETIME": timedelta(days=1),
 }
 
-otp_lifetime = 180
+OTP_LIFETIME = 180
