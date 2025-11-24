@@ -8,7 +8,7 @@
 	},
 	"item": [
 		{
-			"name": "category-list-create",
+			"name": "category-list",
 			"protocolProfileBehavior": {
 				"disableBodyPruning": true
 			},
@@ -35,7 +35,7 @@
 					}
 				},
 				"url": {
-					"raw": "http://127.0.0.1:8000/courses/category-list-create",
+					"raw": "http://127.0.0.1:8000/courses/categories",
 					"protocol": "http",
 					"host": [
 						"127",
@@ -46,14 +46,14 @@
 					"port": "8000",
 					"path": [
 						"courses",
-						"category-list-create"
+						"categories"
 					]
 				}
 			},
 			"response": []
 		},
 		{
-			"name": "category-list-create",
+			"name": "category-create",
 			"request": {
 				"auth": {
 					"type": "bearer",
@@ -77,7 +77,7 @@
 					}
 				},
 				"url": {
-					"raw": "http://127.0.0.1:8000/courses/category-list-create",
+					"raw": "http://127.0.0.1:8000/courses/categories",
 					"protocol": "http",
 					"host": [
 						"127",
@@ -88,14 +88,14 @@
 					"port": "8000",
 					"path": [
 						"courses",
-						"category-list-create"
+						"categories"
 					]
 				}
 			},
 			"response": []
 		},
 		{
-			"name": "category-retrieve-update-destroy",
+			"name": "category-retrieve",
 			"request": {
 				"auth": {
 					"type": "bearer",
@@ -110,7 +110,7 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "http://127.0.0.1:8000/courses/category-retrieve-update-destroy/1",
+					"raw": "http://127.0.0.1:8000/courses/categories/1",
 					"protocol": "http",
 					"host": [
 						"127",
@@ -121,7 +121,7 @@
 					"port": "8000",
 					"path": [
 						"courses",
-						"category-retrieve-update-destroy",
+						"categories",
 						"1"
 					]
 				}
@@ -129,7 +129,7 @@
 			"response": []
 		},
 		{
-			"name": "category-retrieve-update-destroy",
+			"name": "category-update",
 			"request": {
 				"auth": {
 					"type": "bearer",
@@ -144,7 +144,7 @@
 				"method": "PATCH",
 				"header": [],
 				"url": {
-					"raw": "http://127.0.0.1:8000/courses/category-retrieve-update-destroy/1",
+					"raw": "http://127.0.0.1:8000/courses/categories/1",
 					"protocol": "http",
 					"host": [
 						"127",
@@ -155,7 +155,7 @@
 					"port": "8000",
 					"path": [
 						"courses",
-						"category-retrieve-update-destroy",
+						"categories",
 						"1"
 					]
 				}
@@ -163,7 +163,7 @@
 			"response": []
 		},
 		{
-			"name": "category-retrieve-update-destroy",
+			"name": "category-destroy",
 			"request": {
 				"auth": {
 					"type": "bearer",
@@ -178,7 +178,7 @@
 				"method": "DELETE",
 				"header": [],
 				"url": {
-					"raw": "http://127.0.0.1:8000/courses/category-retrieve-update-destroy/1",
+					"raw": "http://127.0.0.1:8000/courses/categories/1",
 					"protocol": "http",
 					"host": [
 						"127",
@@ -189,7 +189,7 @@
 					"port": "8000",
 					"path": [
 						"courses",
-						"category-retrieve-update-destroy",
+						"categories",
 						"1"
 					]
 				}
@@ -197,7 +197,7 @@
 			"response": []
 		},
 		{
-			"name": "teacher-list-create",
+			"name": "teacher-list",
 			"protocolProfileBehavior": {
 				"disabledSystemHeaders": {}
 			},
@@ -224,7 +224,7 @@
 					}
 				},
 				"url": {
-					"raw": "http://127.0.0.1:8000/courses/teacher-list-create",
+					"raw": "http://127.0.0.1:8000/courses/teachers",
 					"protocol": "http",
 					"host": [
 						"127",
@@ -235,14 +235,14 @@
 					"port": "8000",
 					"path": [
 						"courses",
-						"teacher-list-create"
+						"teachers"
 					]
 				}
 			},
 			"response": []
 		},
 		{
-			"name": "teacher-list-create",
+			"name": "teacher-create",
 			"protocolProfileBehavior": {
 				"disableBodyPruning": true
 			},
@@ -264,7 +264,7 @@
 					"raw": "{\r\n    \"name\": \r\n        \"a b\"\r\n    \r\n}"
 				},
 				"url": {
-					"raw": "http://127.0.0.1:8000/courses/teacher-list-create",
+					"raw": "http://127.0.0.1:8000/courses/teachers",
 					"protocol": "http",
 					"host": [
 						"127",
@@ -275,14 +275,14 @@
 					"port": "8000",
 					"path": [
 						"courses",
-						"teacher-list-create"
+						"teachers"
 					]
 				}
 			},
 			"response": []
 		},
 		{
-			"name": "teacher-retrieve-update-destroy",
+			"name": "teacher-retrieve",
 			"protocolProfileBehavior": {
 				"disableBodyPruning": true
 			},
@@ -304,7 +304,7 @@
 					"raw": "{\r\n    \"name\": \r\n        \"a b\"\r\n    \r\n}"
 				},
 				"url": {
-					"raw": "http://127.0.0.1:8000/courses/teacher-retrieve-update-destroy/1",
+					"raw": "http://127.0.0.1:8000/courses/teachers/1",
 					"protocol": "http",
 					"host": [
 						"127",
@@ -315,7 +315,7 @@
 					"port": "8000",
 					"path": [
 						"courses",
-						"teacher-retrieve-update-destroy",
+						"teachers",
 						"1"
 					]
 				}
@@ -323,7 +323,7 @@
 			"response": []
 		},
 		{
-			"name": "teacher-retrieve-update-destroy",
+			"name": "teacher-update",
 			"request": {
 				"auth": {
 					"type": "bearer",
@@ -347,7 +347,7 @@
 					}
 				},
 				"url": {
-					"raw": "http://127.0.0.1:8000/courses/teacher-retrieve-update-destroy/1",
+					"raw": "http://127.0.0.1:8000/courses/teachers/1",
 					"protocol": "http",
 					"host": [
 						"127",
@@ -358,7 +358,7 @@
 					"port": "8000",
 					"path": [
 						"courses",
-						"teacher-retrieve-update-destroy",
+						"teachers",
 						"1"
 					]
 				}
@@ -366,7 +366,7 @@
 			"response": []
 		},
 		{
-			"name": "teacher-retrieve-update-destroy",
+			"name": "teacher-destroy",
 			"request": {
 				"auth": {
 					"type": "bearer",
@@ -385,7 +385,7 @@
 					"raw": "{\r\n    \"name\": \r\n        \"a b\"\r\n    \r\n}"
 				},
 				"url": {
-					"raw": "http://127.0.0.1:8000/courses/teacher-retrieve-update-destroy/1",
+					"raw": "http://127.0.0.1:8000/courses/teachers/1",
 					"protocol": "http",
 					"host": [
 						"127",
@@ -396,7 +396,7 @@
 					"port": "8000",
 					"path": [
 						"courses",
-						"teacher-retrieve-update-destroy",
+						"teachers",
 						"1"
 					]
 				}
@@ -404,7 +404,7 @@
 			"response": []
 		},
 		{
-			"name": "course-list-create",
+			"name": "course-list",
 			"protocolProfileBehavior": {
 				"disableBodyPruning": true
 			},
@@ -426,7 +426,7 @@
 					"raw": "{\r\n    \"name\": \r\n        \"a b\"\r\n    \r\n}"
 				},
 				"url": {
-					"raw": "http://127.0.0.1:8000/courses/course-list-create",
+					"raw": "http://127.0.0.1:8000/courses/courses",
 					"protocol": "http",
 					"host": [
 						"127",
@@ -437,14 +437,14 @@
 					"port": "8000",
 					"path": [
 						"courses",
-						"course-list-create"
+						"courses"
 					]
 				}
 			},
 			"response": []
 		},
 		{
-			"name": "course-list-create",
+			"name": "course-create",
 			"request": {
 				"auth": {
 					"type": "bearer",
@@ -468,7 +468,7 @@
 					}
 				},
 				"url": {
-					"raw": "http://127.0.0.1:8000/courses/course-list-create",
+					"raw": "http://127.0.0.1:8000/courses/courses",
 					"protocol": "http",
 					"host": [
 						"127",
@@ -479,14 +479,14 @@
 					"port": "8000",
 					"path": [
 						"courses",
-						"course-list-create"
+						"courses"
 					]
 				}
 			},
 			"response": []
 		},
 		{
-			"name": "course-retrieve-update-destroy",
+			"name": "course-retrieve",
 			"protocolProfileBehavior": {
 				"disableBodyPruning": true
 			},
@@ -508,7 +508,7 @@
 					"raw": "{\r\n    \"name\": \r\n        \"a b\"\r\n    \r\n}"
 				},
 				"url": {
-					"raw": "http://127.0.0.1:8000/courses/course-retrieve-update-destroy/1",
+					"raw": "http://127.0.0.1:8000/courses/courses/1",
 					"protocol": "http",
 					"host": [
 						"127",
@@ -519,7 +519,7 @@
 					"port": "8000",
 					"path": [
 						"courses",
-						"course-retrieve-update-destroy",
+						"courses",
 						"1"
 					]
 				}
@@ -527,7 +527,7 @@
 			"response": []
 		},
 		{
-			"name": "course-retrieve-update-destroy",
+			"name": "course-update",
 			"request": {
 				"auth": {
 					"type": "bearer",
@@ -546,7 +546,7 @@
 					"raw": "{\r\n    \"name\": \r\n        \"a b\"\r\n    \r\n}"
 				},
 				"url": {
-					"raw": "http://127.0.0.1:8000/courses/course-retrieve-update-destroy/1",
+					"raw": "http://127.0.0.1:8000/courses/courses/1",
 					"protocol": "http",
 					"host": [
 						"127",
@@ -557,7 +557,7 @@
 					"port": "8000",
 					"path": [
 						"courses",
-						"course-retrieve-update-destroy",
+						"courses",
 						"1"
 					]
 				}
@@ -565,7 +565,7 @@
 			"response": []
 		},
 		{
-			"name": "course-retrieve-update-destroy",
+			"name": "course-destroy",
 			"request": {
 				"auth": {
 					"type": "bearer",
@@ -584,7 +584,7 @@
 					"raw": "{\r\n    \"name\": \r\n        \"a b\"\r\n    \r\n}"
 				},
 				"url": {
-					"raw": "http://127.0.0.1:8000/courses/course-retrieve-update-destroy/1",
+					"raw": "http://127.0.0.1:8000/courses/courses/1",
 					"protocol": "http",
 					"host": [
 						"127",
@@ -595,7 +595,7 @@
 					"port": "8000",
 					"path": [
 						"courses",
-						"course-retrieve-update-destroy",
+						"courses",
 						"1"
 					]
 				}
@@ -603,7 +603,7 @@
 			"response": []
 		},
 		{
-			"name": "group-member-list-create",
+			"name": "group-member-create",
 			"request": {
 				"auth": {
 					"type": "bearer",
@@ -627,7 +627,7 @@
 					}
 				},
 				"url": {
-					"raw": "http://127.0.0.1:8000/courses/group-member-list-create",
+					"raw": "http://127.0.0.1:8000/courses/group_members",
 					"protocol": "http",
 					"host": [
 						"127",
@@ -638,14 +638,14 @@
 					"port": "8000",
 					"path": [
 						"courses",
-						"group-member-list-create"
+						"group_members"
 					]
 				}
 			},
 			"response": []
 		},
 		{
-			"name": "group-member-list-create",
+			"name": "group-member-list",
 			"protocolProfileBehavior": {
 				"disableBodyPruning": true
 			},
@@ -667,7 +667,7 @@
 					"raw": "{\r\n    \"title\": \r\n        \"This field is required.\"\r\n    ,\r\n    \"course_type\": \r\n        \"1\"\r\n    ,\r\n    \"price\": \r\n        \"100\"\r\n    ,\r\n    \"description\": \r\n        \"This field is required.\"\r\n    ,\r\n    \"category\": \r\n        \"1\"\r\n    ,\r\n    \"start_date\": \r\n        \"11-5-2025\"\r\n    ,\r\n    \"duration\": \r\n        \"2\"\r\n    \r\n}"
 				},
 				"url": {
-					"raw": "http://127.0.0.1:8000/courses/group-member-list-create",
+					"raw": "http://127.0.0.1:8000/courses/group_members",
 					"protocol": "http",
 					"host": [
 						"127",
@@ -678,14 +678,14 @@
 					"port": "8000",
 					"path": [
 						"courses",
-						"group-member-list-create"
+						"group_members"
 					]
 				}
 			},
 			"response": []
 		},
 		{
-			"name": "group-member-retrieve-update-destroy",
+			"name": "group-member-retrieve",
 			"protocolProfileBehavior": {
 				"disableBodyPruning": true
 			},
@@ -707,7 +707,7 @@
 					"raw": "{\r\n    \"title\": \r\n        \"This field is required.\"\r\n    ,\r\n    \"course_type\": \r\n        \"1\"\r\n    ,\r\n    \"price\": \r\n        \"100\"\r\n    ,\r\n    \"description\": \r\n        \"This field is required.\"\r\n    ,\r\n    \"category\": \r\n        \"1\"\r\n    ,\r\n    \"start_date\": \r\n        \"11-5-2025\"\r\n    ,\r\n    \"duration\": \r\n        \"2\"\r\n    \r\n}"
 				},
 				"url": {
-					"raw": "http://127.0.0.1:8000/courses/group-member-retrieve-update-destroy/1",
+					"raw": "http://127.0.0.1:8000/courses/group_members/1",
 					"protocol": "http",
 					"host": [
 						"127",
@@ -718,7 +718,7 @@
 					"port": "8000",
 					"path": [
 						"courses",
-						"group-member-retrieve-update-destroy",
+						"group_members",
 						"1"
 					]
 				}
@@ -726,7 +726,7 @@
 			"response": []
 		},
 		{
-			"name": "group-member-retrieve-update-destroy",
+			"name": "group-member-update",
 			"request": {
 				"auth": {
 					"type": "bearer",
@@ -745,7 +745,7 @@
 					"raw": "{\r\n    \"title\": \r\n        \"This field is required.\"\r\n    ,\r\n    \"course_type\": \r\n        \"1\"\r\n    ,\r\n    \"price\": \r\n        \"100\"\r\n    ,\r\n    \"description\": \r\n        \"This field is required.\"\r\n    ,\r\n    \"category\": \r\n        \"1\"\r\n    ,\r\n    \"start_date\": \r\n        \"11-5-2025\"\r\n    ,\r\n    \"duration\": \r\n        \"2\"\r\n    \r\n}"
 				},
 				"url": {
-					"raw": "http://127.0.0.1:8000/courses/group-member-retrieve-update-destroy/1",
+					"raw": "http://127.0.0.1:8000/courses/group_members/1",
 					"protocol": "http",
 					"host": [
 						"127",
@@ -756,7 +756,7 @@
 					"port": "8000",
 					"path": [
 						"courses",
-						"group-member-retrieve-update-destroy",
+						"group_members",
 						"1"
 					]
 				}
@@ -764,7 +764,7 @@
 			"response": []
 		},
 		{
-			"name": "group-member-retrieve-update-destroy",
+			"name": "group-member-destroy",
 			"request": {
 				"auth": {
 					"type": "bearer",
@@ -783,7 +783,7 @@
 					"raw": "{\r\n    \"title\": \r\n        \"This field is required.\"\r\n    ,\r\n    \"course_type\": \r\n        \"1\"\r\n    ,\r\n    \"price\": \r\n        \"100\"\r\n    ,\r\n    \"description\": \r\n        \"This field is required.\"\r\n    ,\r\n    \"category\": \r\n        \"1\"\r\n    ,\r\n    \"start_date\": \r\n        \"11-5-2025\"\r\n    ,\r\n    \"duration\": \r\n        \"2\"\r\n    \r\n}"
 				},
 				"url": {
-					"raw": "http://127.0.0.1:8000/courses/group-member-retrieve-update-destroy/1",
+					"raw": "http://127.0.0.1:8000/courses/group_members/1",
 					"protocol": "http",
 					"host": [
 						"127",
@@ -794,7 +794,7 @@
 					"port": "8000",
 					"path": [
 						"courses",
-						"group-member-retrieve-update-destroy",
+						"group_members",
 						"1"
 					]
 				}
@@ -1190,7 +1190,7 @@
 			"response": []
 		},
 		{
-			"name": "Ticket-list-create",
+			"name": "Ticket-list",
 			"protocolProfileBehavior": {
 				"disableBodyPruning": true
 			},
@@ -1212,7 +1212,7 @@
 					"raw": "{\r\n    \"title\": \r\n        \"This field is required.\"\r\n    ,\r\n    \"course_type\": \r\n        \"1\"\r\n    ,\r\n    \"price\": \r\n        \"100\"\r\n    ,\r\n    \"description\": \r\n        \"This field is required.\"\r\n    ,\r\n    \"category\": \r\n        \"1\"\r\n    ,\r\n    \"start_date\": \r\n        \"11-5-2025\"\r\n    ,\r\n    \"duration\": \r\n        \"2\"\r\n    \r\n}"
 				},
 				"url": {
-					"raw": "http://127.0.0.1:8000/courses/Ticket-list-create",
+					"raw": "http://127.0.0.1:8000/courses/tickets",
 					"protocol": "http",
 					"host": [
 						"127",
@@ -1223,14 +1223,14 @@
 					"port": "8000",
 					"path": [
 						"courses",
-						"Ticket-list-create"
+						"tickets"
 					]
 				}
 			},
 			"response": []
 		},
 		{
-			"name": "Ticket-list-create",
+			"name": "Ticket-create",
 			"request": {
 				"auth": {
 					"type": "bearer",
@@ -1249,7 +1249,7 @@
 					"raw": "{\r\n    \"title\": \r\n        \"This field is required.\"\r\n    ,\r\n    \"course_type\": \r\n        \"1\"\r\n    ,\r\n    \"price\": \r\n        \"100\"\r\n    ,\r\n    \"description\": \r\n        \"This field is required.\"\r\n    ,\r\n    \"category\": \r\n        \"1\"\r\n    ,\r\n    \"start_date\": \r\n        \"11-5-2025\"\r\n    ,\r\n    \"duration\": \r\n        \"2\"\r\n    \r\n}"
 				},
 				"url": {
-					"raw": "http://127.0.0.1:8000/courses/Ticket-list-create",
+					"raw": "http://127.0.0.1:8000/courses/tickets",
 					"protocol": "http",
 					"host": [
 						"127",
@@ -1260,14 +1260,14 @@
 					"port": "8000",
 					"path": [
 						"courses",
-						"Ticket-list-create"
+						"tickets"
 					]
 				}
 			},
 			"response": []
 		},
 		{
-			"name": "ticket-retrieve-update-destroy",
+			"name": "ticket-retrieve",
 			"protocolProfileBehavior": {
 				"disableBodyPruning": true
 			},
@@ -1308,7 +1308,7 @@
 			"response": []
 		},
 		{
-			"name": "ticket-retrieve-update-destroy",
+			"name": "ticket-update",
 			"request": {
 				"auth": {
 					"type": "bearer",
@@ -1327,7 +1327,7 @@
 					"raw": "{\r\n    \"title\": \r\n        \"This field is required.\"\r\n    ,\r\n    \"course_type\": \r\n        \"1\"\r\n    ,\r\n    \"price\": \r\n        \"100\"\r\n    ,\r\n    \"description\": \r\n        \"This field is required.\"\r\n    ,\r\n    \"category\": \r\n        \"1\"\r\n    ,\r\n    \"start_date\": \r\n        \"11-5-2025\"\r\n    ,\r\n    \"duration\": \r\n        \"2\"\r\n    \r\n}"
 				},
 				"url": {
-					"raw": "http://127.0.0.1:8000/courses/ticket-retrieve-update-destroy/1",
+					"raw": "http://127.0.0.1:8000/courses/tickets/1",
 					"protocol": "http",
 					"host": [
 						"127",
@@ -1338,7 +1338,7 @@
 					"port": "8000",
 					"path": [
 						"courses",
-						"ticket-retrieve-update-destroy",
+						"tickets",
 						"1"
 					]
 				}
@@ -1346,7 +1346,7 @@
 			"response": []
 		},
 		{
-			"name": "ticket-retrieve-update-destroy",
+			"name": "ticket-destroy",
 			"request": {
 				"auth": {
 					"type": "bearer",
@@ -1365,7 +1365,7 @@
 					"raw": "{\r\n    \"name\": \r\n        \"a b\"\r\n    \r\n}"
 				},
 				"url": {
-					"raw": "http://127.0.0.1:8000/courses/ticket-retrieve-update-destroy/1",
+					"raw": "http://127.0.0.1:8000/courses/tickets/1",
 					"protocol": "http",
 					"host": [
 						"127",
@@ -1376,7 +1376,7 @@
 					"port": "8000",
 					"path": [
 						"courses",
-						"ticket-retrieve-update-destroy",
+						"tickets",
 						"1"
 					]
 				}
